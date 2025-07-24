@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronRight, Shield, Lock, Eye, Terminal } from 'lucide-react';
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-export default defineConfig({
-  base: '/Cybersecurity-Mentor-Consultant/', // <-- أضف هذا السطر
-  plugins: [react()],
-});
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
