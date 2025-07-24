@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronRight, Shield, Lock, Eye, Terminal } from 'lucide-react';
-import heroCyberImg from '../assets/hero-cyber.jpg';
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
@@ -21,7 +20,7 @@ const Hero: React.FC = () => {
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
       {/* Background Image */}
-      <img src={heroCyberImg} alt="Cybersecurity" className="absolute inset-0 w-full h-full object-cover opacity-70 z-0" />
+      <img src="/Cybersecurity-Mentor-Consultant/hero-cyber.jpg" alt="Cybersecurity" className="absolute inset-0 w-full h-full object-cover opacity-70 z-0" />
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/70 z-0"></div>
       {/* Animated Glowing Circles */}
