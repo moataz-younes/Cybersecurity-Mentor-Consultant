@@ -5,7 +5,4 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   base: '/Cybersecurity-Mentor-Consultant/',
   plugins: [react()],
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
 });
