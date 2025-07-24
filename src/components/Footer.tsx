@@ -1,12 +1,11 @@
 import React from 'react';
 import { Shield, Github, Linkedin, Twitter, Mail } from 'lucide-react';
-import binaryBgImg from '../assets/binary-bg.jpg';
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-b from-black to-red-950/20 border-t border-red-500/20 relative overflow-hidden">
       {/* Binary Background Image */}
-      <img src={binaryBgImg} alt="Binary Background" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
+      <img src="/52930410.jpg" alt="Binary Background" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
       <div className="absolute inset-0 bg-black/70 z-0"></div>
       <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-10">
