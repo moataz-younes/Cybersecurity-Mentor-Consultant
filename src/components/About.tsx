@@ -58,16 +58,6 @@ const About: React.FC = () => {
               <div className="text-3xl font-bold text-white">15+</div>
               <div className="text-gray-400">Professional Certifications</div>
             </div>
-            <div className="bg-slate-800/30 p-8 rounded-xl border border-blue-500/20 hover:border-blue-500/40 transition-colors">
-              <Users className="w-12 h-12 text-blue-400 mb-4" />
-              <div className="text-3xl font-bold text-white">2</div>
-              <div className="text-gray-400">Languages (AR/EN)</div>
-            </div>
-            <div className="bg-slate-800/30 p-8 rounded-xl border border-red-500/20 hover:border-red-500/40 transition-colors">
-              <Clock className="w-12 h-12 text-red-400 mb-4" />
-              <div className="text-3xl font-bold text-white">2025</div>
-              <div className="text-gray-400">Active Since</div>
-            </div>
           </div>
         </div>
       </div>

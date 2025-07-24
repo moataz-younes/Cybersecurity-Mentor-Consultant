@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { ChevronRight, Shield, Lock, Eye, Terminal } from 'lucide-react';
+import heroCyberImg from '../assets/hero-cyber.jpg';
 
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
@@ -19,6 +20,16 @@ const Hero: React.FC = () => {
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden">
+      {/* Background Image */}
+      <img src={heroCyberImg} alt="Cybersecurity" className="absolute inset-0 w-full h-full object-cover opacity-70 z-0" />
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      {/* Animated Glowing Circles */}
+      <div className="absolute z-0 inset-0 pointer-events-none">
+        <div className="absolute top-1/4 left-1/3 w-60 h-60 bg-cyan-400 opacity-20 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-10 right-1/4 w-40 h-40 bg-green-400 opacity-20 rounded-full blur-2xl animate-pulse-slow"></div>
+        <div className="absolute top-10 right-10 w-32 h-32 bg-red-400 opacity-20 rounded-full blur-2xl animate-pulse-slow"></div>
+      </div>
       {/* Matrix Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black via-red-950/30 to-slate-900"></div>
       
@@ -53,19 +64,19 @@ const Hero: React.FC = () => {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-32">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
           {/* Content */}
           <div className="text-white space-y-10">
             <div className="space-y-8">
               <div className="inline-flex items-center px-6 py-3 bg-red-500/10 border border-red-500/30 rounded-full text-red-400 text-sm font-mono">
                 <Terminal className="w-4 h-4 mr-2" />
-                Cybersecurity Mentor & Consultant | Expert in Cybercrime Investigations, OSINT & Legal-Tech Integration
+                Cybersecurity Consultant & Mentor | Expert in Cybercrime Investigations, OSINT & Legal-Tech Integration
               </div>
               
               <h1 className="text-6xl lg:text-7xl font-bold leading-tight">
                 Cybersecurity
                 <span className="block text-transparent bg-clip-text bg-gradient-to-r from-red-400 via-green-400 to-blue-400">
-                  Mentor & Consultant
+                  Consultant & Mentor
                 </span>
               </h1>
               
@@ -105,7 +116,14 @@ const Hero: React.FC = () => {
                 Schedule Consultation
                 <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-red-500 text-red-400 px-10 py-4 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300">
+              <button className="border-2 border-red-500 text-red-400 px-10 py-4 rounded-lg font-semibold hover:bg-red-500 hover:text-white transition-all duration-300"
+                onClick={() => {
+                  const section = document.getElementById('portfolio');
+                  if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+              >
                 View Projects
               </button>
             </div>

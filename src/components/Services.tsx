@@ -81,7 +81,13 @@ const Services: React.FC = () => {
   };
 
   return (
-    <section id="services" className="py-32 bg-gradient-to-b from-red-950/20 to-slate-900">
+    <section id="services" className="py-32 bg-gradient-to-b from-red-950/20 to-slate-900 relative overflow-hidden">
+      {/* Animated Glowing Circles */}
+      <div className="absolute z-0 inset-0 pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-56 h-56 bg-green-400 opacity-15 rounded-full blur-3xl animate-pulse-slow"></div>
+        <div className="absolute bottom-20 right-1/5 w-40 h-40 bg-cyan-400 opacity-15 rounded-full blur-2xl animate-pulse-slow"></div>
+        <div className="absolute top-10 right-1/3 w-32 h-32 bg-red-400 opacity-15 rounded-full blur-2xl animate-pulse-slow"></div>
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-20">
           <h2 className="text-4xl font-bold text-white mb-4">
@@ -122,9 +128,6 @@ const Services: React.FC = () => {
                   ))}
                 </ul>
 
-                <button className={`mt-6 w-full py-3 border ${colors.border} ${colors.accent} rounded-lg hover:${colors.bg} transition-colors font-medium`}>
-                  Learn More
-                </button>
               </div>
             );
           })}

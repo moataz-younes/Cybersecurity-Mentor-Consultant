@@ -1,10 +1,14 @@
 import React from 'react';
 import { Shield, Github, Linkedin, Twitter, Mail } from 'lucide-react';
+import binaryBgImg from '../assets/binary-bg.jpg';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-b from-black to-red-950/20 border-t border-red-500/20">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <footer className="bg-gradient-to-b from-black to-red-950/20 border-t border-red-500/20 relative overflow-hidden">
+      {/* Binary Background Image */}
+      <img src={binaryBgImg} alt="Binary Background" className="absolute inset-0 w-full h-full object-cover opacity-40 z-0" />
+      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      <div className="max-w-7xl mx-auto px-4 py-12 relative z-10">
         <div className="grid md:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="col-span-1 md:col-span-2">
@@ -19,7 +23,7 @@ const Footer: React.FC = () => {
               through expert cybercrime investigation, OSINT research, and digital forensics.
             </p>
             <div className="flex space-x-6 mt-8">
-              <a href="https://github.com/blackbird889" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">
+              <a href="https://github.com/moataz-younes" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-400 transition-colors">
                 <Github className="w-5 h-5" />
               </a>
               <a href="http://www.linkedin.com/in/moataz-younes" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-400 transition-colors">

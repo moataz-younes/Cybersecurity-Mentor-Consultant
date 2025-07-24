@@ -104,10 +104,15 @@ ${formData.message}`;
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-white">Quick Actions</h4>
               <div className="space-y-4">
-                <button className="w-full flex items-center justify-center space-x-3 bg-red-500/10 border border-red-500/20 text-red-400 py-4 rounded-lg hover:bg-red-500/20 transition-colors">
+                <a
+                  href="https://forms.gle/kGxNg7bq8aapDpzT7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center space-x-3 bg-red-500/10 border border-red-500/20 text-red-400 py-4 rounded-lg hover:bg-red-500/20 transition-colors"
+                >
                   <Calendar className="w-5 h-5" />
                   <span>Schedule Investigation Consultation</span>
-                </button>
+                </a>
                 <button className="w-full flex items-center justify-center space-x-3 bg-green-500/10 border border-green-500/20 text-green-400 py-4 rounded-lg hover:bg-green-500/20 transition-colors">
                   <MessageCircle className="w-5 h-5" />
                   <span>Emergency Investigation Support</span>
@@ -164,7 +169,7 @@ ${formData.message}`;
                   value={formData.company}
                   onChange={handleChange}
                   className="w-full px-4 py-3 bg-slate-700 border border-gray-600 rounded-lg text-white focus:border-red-500 focus:outline-none transition-colors"
-                  placeholder="Your company name"
+                  placeholder="Your company name (optional)"
                 />
               </div>
 
